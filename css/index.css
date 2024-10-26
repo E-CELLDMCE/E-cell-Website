@@ -4,7 +4,7 @@ html, body {
     height: 100%;
 }
 body {
-    background-image: url(../images/bg/home_background_image.jpeg);
+    background-image: url(../images/bg/home_bg.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -52,7 +52,7 @@ body {
 }
 /* ------------ Styling of Backbones section ------------ */
 .bg-dark {
-    background-image: url(../html/img1141.jpg);
+    background-image: url(../images/bg/img1141.jpg);
 
 }
 
@@ -81,7 +81,7 @@ body {
 }
 /* ------------ Styling of NEC section ------------ */
 bg-dark {
-    background-image: url(../html/img1141.jpg);
+    background-image: url(../images/bg/img1141.jpg);
 }
 #Heading-9 {
     color: beige;
