@@ -15,10 +15,10 @@
 <body>
 
     <!-- Black overlay -->
-    <div class="overlay"></div>
+    <div class="overlay-home"></div>
 
     <!-- Navbar -->
-    <nav class="content border-gray-200 dark:bg-gray-900">
+    <nav class="content border-gray-200 dark:bg-gray-900" style="height: 20%;">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse h-8 sm:h-8 md:h-12 lg:h-12">
                 <img src="../images/logo/ecell logo.png" class="h-8" alt="Ecell Logo" />
@@ -106,20 +106,21 @@
 
 
     <!-- Meet Our Backbones Section -->
-    <section class="backbones bg-dark py-8 text-center">
-        <h1 class="text-4xl font-bold text-yellow mb-8">Meet the Backbones<br /> of E-Cell DMCE</h1>
+    <section class="backbones bg-dark text-center">
+        <h1 class="md:mb-12 mb-6 text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">Meet The Backbones of <br> <span
+            class="text-yellow">E-Cell DMCE!</span></h1>
         <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
             <div class="backbone-member p-4">
-                <img src="../images/faculties/Sameer Sir.jpg" alt="Late Mr. Sameer Ekbote" class="rounded-lg w-48 h-48 mb-4 mx-auto">
-                <p class="text-white">Late Mr. Sameer Ekbote</p>
+                <img src="../images/faculties/Sameer Sir.jpg" alt="Late Mr. Sameer Ekbote" class="rounded-lg w-80 h-80 mb-4 mx-auto">
+                <p class="text-white text-2xl font-semibold leading-none">Late Mr. Sameer Ekbote</p>
             </div>
             <div clasS="backbone-member p-4">
-                <img src="../images/faculties/meghna Ma'am.jpg" alt="Dr. Meghana Chatterjee" class="rounded-lg w-48 h-48 mb-4 mx-auto">
-                <p class="text-white">Dr. Meghana Chatterjee</p>
+                <img src="../images/faculties/meghna Ma'am.jpg" alt="Dr. Meghana Chatterjee" class="rounded-lg w-80 h-80 mb-4 mx-auto">
+                <p class="text-white text-2xl font-semibold leading-none">Dr. Meghana Chatterjee</p>
             </div>
             <div class="backbone-member" p-4>
-                <img src="../images/faculties/Aruna Ma'am.jpg" alt="Dr. Aruna Henry" class="rounded-lg w-48 h-48 mb-4 mx-auto">
-                <p class="text-white">Dr. Aruna Henry</p>
+                <img src="../images/faculties/Aruna Ma'am.jpg" alt="Dr. Aruna Henry" class="rounded-lg w-80 h-80 mb-4 mx-auto">
+                <p class="text-white text-2xl font-semibold leading-none">Dr. Aruna Henry</p>
             </div>
         </div>
     </section>
@@ -136,45 +137,49 @@
     </section> -->
 
     
-    <!-- Nec Winner -->
-    <section class="bg-dark Heading-8 text-center">
-        <h1 class="text-4xl font-bold text-yellow mb-8">NEC Winner </h1>
-        <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
-            </h1 class="nt-bold text-yellow mb-8">NEC Winner</h1>
-            <div class="backbone-member p-4" id="left-div">
-                <img id="NEC-Img" src="../images/nec/Nec.jpg">
+    <!-- NEC Winner Section -->
+    <section id="necWinner" class="text-center py-12 md:py-24">
+        <h1 class="md:mb-12 mb-6 text-4xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">NEC <span
+            class="text-yellow">Winner!</span></h1>
+        <div class="container mx-auto flex flex-col md:flex-row justify-center items-center md:justify-center gap-8">
+            <div class="backbone-member flex-shrink-0">
+                <img src="../images/nec/Nec.jpg" alt="NEC Winner" class="w-[50vw] md:w-[50vw] h-auto rounded-lg">
             </div>
-            <div class="right-div">
-                <h1 id="Heading-9">All India TRIUMP in IIT <br>Bombay's National<br>Entrepreneurship Challenge-2019</h1>
-                <p class="styled-paragraph">
+            <div class="text-left text-white md:max-w-xl">
+                <h2 class="text-2xl md:text-4xl font-bold leading-tight mb-4 text-center md:text-left">
+                    All India Triumph in IIT <br> Bombay's National <br> Entrepreneurship Challenge-2019
+                </h2>
+                <p class="text-base md:text-lg leading-relaxed text-center md:text-left ">
                     In 2019, our dynamic Ecell team clinched the prestigious All India First Rank, outshining a pool of
-                    750+ colleges in the fundamental track of the National Entrepreneurship Challenge hosted by IIT
-                    Bombay. Under the expert guidance of Prof. Sameer Ekbote and Dr. R. R. Jaware, our journey
-                    exemplified unwavering dedication and a resolute entrepreneurial spirit, marking a milestone in
-                    innovation and excellence.
+                    750+ colleges in the fundamental track of the National Entrepreneurship Challenge hosted by IIT Bombay. 
+                    Under the expert guidance of Prof. Sameer Ekbote and Dr. R. R. Jaware, our journey exemplified 
+                    unwavering dedication and a resolute entrepreneurial spirit, marking a milestone in innovation and excellence.
                 </p>
             </div>
         </div>
     </section>
+    
+
+    
 
     <!-- Contact Us -->
     <section id="contactUs" class="bg-dark h-30 flex items-center lg:py-28 py-16">
         <div class="container mx-auto px-4">
             <div class="flex flex-col items-center">
-                <h1 class="mb-6 text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl text-left">Let's <span
+                <h1 class="mb-6 text-4xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl text-left">Let's <span
                         class="text-yellow">Connect!</span></h1>
                 <div class="inputs w-full sm:w-3/4 lg:w-3/5">
-                    <div class="flex items-center input">
+                    <div class="flex items-center input my-4">
                         <i class="ml-1 fa-solid fa-user lg:text-xl" style="color: white;"></i>
                         <input class="bg-transparent ml-4 lg:text-3xl focus:outline-none text-white w-full" type="text"
                             name="" id="" placeholder="Enter your name">
                     </div>
-                    <div class="flex items-center input">
+                    <div class="flex items-center input my-4">
                         <i class="ml-1 fa-solid fa-phone lg:text-xl" style="color: white;"></i>
                         <input class="bg-transparent ml-4 lg:text-3xl focus:outline-none text-white w-full"
-                            type="number" name="" id="" placeholder="Enter your phone number">
+                            type="text" name="" id="" placeholder="Enter your phone number">
                     </div>
-                    <div class="flex items-center input">
+                    <div class="flex items-center input my-4">
                         <i class="ml-1 fa-solid fa-envelope lg:text-xl" style="color: white;"></i>
                         <input class="bg-transparent ml-4 lg:text-3xl focus:outline-none text-white w-full" type="email"
                             name="" id="" placeholder="Your email id">
