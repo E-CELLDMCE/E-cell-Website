@@ -1,16 +1,22 @@
 /* ------------ Styling of Home page ------------ */
-html, body {
-    // overflow-wrap: normal;
-    height: 100%;
+* {
+    box-sizing: border-box;
 }
+
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
     background-image: url(../images/bg/home_bg.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
     background-color: black;
-    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 .text-yellow {
     color: #FFF600;
@@ -49,6 +55,45 @@ body {
     border-radius: 5rem;
     background: #181A2D;
 }
+
+#navbar-sticky {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    background: black; /* Change the rgba value to adjust overlay color and transparency */
+    z-index: 5;
+    overflow-x: hidden;
+}
+
+#navbar-sticky ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar-sticky ul li{ 
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#navbar-sticky ul li:hover{ 
+    color: #FF5900;
+    transition: .2s;
+}
+
+.cancelBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+}
+
 /* ------------ Styling of Backbones section ------------ */
 
 .bg-dark {
@@ -152,6 +197,9 @@ bg-dark {
     #necWinner img{
         width: auto;
     }   
+    body {
+        overflow-x: hidden;
+    }
 }
 
 
