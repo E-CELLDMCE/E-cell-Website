@@ -17,6 +17,10 @@ main {
     background-color: black;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+}
+section {
+    overflow: hidden;
 }
 .text-yellow {
     color: #FFF600;
@@ -211,21 +215,3 @@ bg-dark {
     border-radius: 0.375rem; /* Added border-radius for a softer look */
     width: 100%;
 }
-
-
-
-
-
-
-
-
-/* ------------ Styling of About page ------------ */
-
-
-/* ------------ Styling of Teams page ------------  */
-
-
-/* ------------ Styling of Event page ------------ */
-
-
-/* ------------ Styling of Contact page ------------ */

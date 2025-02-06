@@ -29,12 +29,33 @@ html {
   text-align: center;
 }
 
+.text-yellow {
+  color: #FFF600;
+}
+.text-orange {
+  color: #FF5900;
+}
+.bg-yellow {
+  background-color: #FFF600;
+}
+.bg-orange {
+  background-color: #FF5900;
+}
+.active {
+  color: #FFF600;
+}
+.hover-bg-yellow:hover{
+  background-color: #ff9500;
+}
+.hover-text-yellow:hover{
+  color: #FFF600;
+}
+
 .coordinator img {
   width: 200px;
   height: 200px;
   border-radius: 5px;
   object-fit: cover;
-  opacity: 0;
   transform: translateY(-20px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
@@ -70,10 +91,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  .coordinator {
-    width: 100%;
-  }
-
   .vision-mission .card {
     margin-bottom: 20px;
   }

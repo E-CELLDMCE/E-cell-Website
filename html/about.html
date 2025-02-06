@@ -1,101 +1,187 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>About Us</title>
-   <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Tailwind CSS CDN -->
+   <script src="https://cdn.tailwindcss.com"></script>
    <link rel="stylesheet" href="../css/about.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-  <style>
-   body {
-      background-image: url('../images/bg/about_us_bg.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-   }
-  </style>
 
-   <!-- Navbar using Bootstrap -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="#">
-            <img src="../images/logo/ecell logo.png" alt="E-Cell DMCE" width="40" height="40" class="d-inline-block align-text-top">
-            E-Cell DMCE
-         </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-               <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">About Us</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="Events1.html">Events</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="ourteams.html">Our Team</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-               </li>
-            </ul>
-         </div>
+<body class="bg-cover bg-center bg-no-repeat" style="background-image: url('../images/bg/about_us_bg.jpg');">
+   <style>
+      #navbar-sticky {
+         position: fixed;
+         top: 0;
+         height: 100vh;
+         width: 100%;
+         max-width: 100vw;
+         background: black;
+         z-index: 5;
+         overflow-x: hidden;
+      }
+
+      #navbar-sticky ul {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      #navbar-sticky ul li {
+         color: white;
+         font-size: 2rem;
+         font-weight: bolder;
+      }
+
+      #navbar-sticky ul li:hover {
+         color: #FF5900;
+         transition: .2s;
+      }
+      .cancelBtn {
+         position: absolute;
+         top: 0;
+         right: 0;
+         margin: 2rem;
+      }
+   </style>
+
+   <!-- Navbar (if you want to add navbar with Tailwind) -->
+   <!-- <div id="navbar-sticky">
+      <ul>
+         <li class="links"><a href="#" class="text-white hover:text-orange-500">Home</a></li>
+         <li class="links"><a href="about.html" class="text-white hover:text-orange-500">About Us</a></li>
+         <li class="links"><a href="Events1.html" class="text-white hover:text-orange-500">Events</a></li>
+         <li class="links"><a href="ourteams.html" class="text-white hover:text-orange-500">Our Team</a></li>
+         <li class="links"><a href="contact.html" class="text-white hover:text-orange-500">Contact</a></li>
+      </ul>
+   </div> -->
+<div>
+   <div id="navbar-sticky">
+      <ul>
+          <li class="links"><a href="index.html">Home</a></li>
+          <li class="links"> <a href="#" style="color: #FF5900;">About Us</a></li>
+          <li class="links"><a href="Events1.html">Events</a></li>
+          <li class="links"><a href="ourteams.html">Our Team</a></li>
+          <li class="links"><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div id="cancelBtn" class="cancelBtn"><i class="fa-solid fa-xmark" style="color: white;"></i></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="content border-gray-200" style="height: 20%;">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse h-8 sm:h-8 md:h-12 lg:h-12">
+              <img src="../images/logo/ecell logo.png" class="h-8 navDown" alt="Ecell Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+              <a href="https://forms.gle/ac75qSwrfCo4VXrR8" target="_blank">
+                  <button type="button"
+                      class="text-white bg-orange hover-bg-yellow font-medium rounded-3xl text-xs sm:text-sm px-4 py-2 text-center navDown">Register
+                      for Pitching Competition <i class="fa-solid fa-circle-arrow-right" style="color: white;"></i>
+                  </button>
+              </a>
+              <!-- <a href="https://forms.gle/1iEMx1qRr2SsX29s7" target="_blank">
+                  <button type="button"
+                      class="text-white bg-orange hover-bg-yellow font-medium rounded-3xl text-xs sm:text-sm px-4 py-2 text-center">Register
+                      for Debate Competition <i class="fa-solid fa-circle-arrow-right" style="color: white;"></i>
+                  </button>
+              </a> -->
+              <button data-collapse-toggle="navbar-sticky" type="button"
+                  class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 navDown"
+                  aria-controls="navbar-sticky" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 1h15M1 7h15M1 13h15" />
+                  </svg>
+              </button>
+          </div>
+
+
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 mr-4">
+              <ul
+                  class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 text-white">
+                  <li>
+                      <a href="index.html" target="_blank"
+                          class="block py-2 px-3 md:p-0 rounded md:bg-transparent hover-text-yellow navDown"
+                          aria-current="page">Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="about.html" class="block py-2 px-3 md:p-0 text-white active rounded hover-text-yellow navDown" >
+                          About Us
+                      </a>
+                  </li>
+                  <li>
+                      <a href="Events1.html" target="_blank"
+                          class="block py-2 px-3 md:p-0 text-white rounded hover-text-yellow navDown">Events
+                      </a>
+                  </li>
+                  <li>
+                      <a href="ourteams.html" target="_blank"
+                          class="block py-2 px-3 md:p-0 text-white rounded hover-text-yellow navDown">Our Team
+                      </a>
+                  </li>
+                  <li>
+                      <a href="contact.html" target="_blank"
+                          class="block py-2 px-3 md:p-0 text-white rounded hover-text-yellow navDown">Contact
+                      </a>
+                  </li>
+              </ul>
+          </div>
       </div>
-   </nav>
+  </nav>
+</div>
 
-
-   <div class="about-us">
-      <h1 class="heading">E-Cell Coordinators</h1>
-      <div class="coordinators">
+   <div class="about-us py-12 text-center">
+      <h1 class="text-4xl font-extrabold text-white">E-Cell Coordinators</h1>
+      <div class="coordinators flex justify-center mt-8 ">
          <div class="coordinator">
             <div class="social-media">
-               <img src="../images/faculties/deepali maam .jpg" alt="Coordinator 1 Photo" class="fade-in">  
+               <img src="../images/faculties/deepali maam .jpg" alt="Coordinator 1 Photo" class="transition-opacity opacity-0 duration-1000">
             </div>
-            <a href="https://linkedin.com/in/sejal-khilari-a387b4252"> 
-               <h2 class="name">Miss. Deepali Kadam</h2>
+            <a href="https://linkedin.com/in/sejal-khilari-a387b4252">
+               <h2 class="name text-xl text-white">Miss. Deepali Kadam</h2>
             </a>
          </div>
          <div class="coordinator">
             <div class="social-media">
-               <img src="../images/faculties/anand sir.jpg" alt="Coordinator 2 Photo" class="fade-in">
+               <img src="../images/faculties/anand sir.jpg" alt="Coordinator 2 Photo" class="transition-opacity opacity-0 duration-1000">
             </div>
-            <a href="https://linkedin.com/in/sejal-khilari-a387b4252"> 
-               <h2 class="name">Mr. Anand Joshi</h2>
+            <a href="https://linkedin.com/in/sejal-khilari-a387b4252">
+               <h2 class="name text-xl text-white">Mr. Anand Joshi</h2>
             </a>
          </div>
       </div>
    </div>
 
    <!-- Vision and Mission Section -->
-   <section class="vision-mission py-5">
-      <div class="container">
-         <div class="row text-center">
-            <div class="col-md-6">
-               <div class="card bg-dark text-white">
-                  <div class="card-body">
-                     <h3 class="card-title">Our Vision</h3>
-                     <p class="card-text">
-                        To create a self-sustaining entrepreneurial ecosystem at DMCE that nurtures young minds and develops them into future innovators and leaders.
-                     </p>
-                  </div>
-               </div>
+   <section class="vision-mission py-12">
+      <div class="container mx-auto px-4">
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card bg-gray-900 text-white p-6 rounded-lg">
+               <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+               <p>
+                  To create a self-sustaining entrepreneurial ecosystem at DMCE that nurtures young minds and develops them into future innovators and leaders.
+               </p>
             </div>
-            <div class="col-md-6">
-               <div class="card bg-dark text-white">
-                  <div class="card-body">
-                     <h3 class="card-title">Our Mission</h3>
-                     <p class="card-text">
-                        To empower students by providing resources, mentorship, and opportunities, fostering an entrepreneurial mindset, and building a strong foundation for startups.
-                     </p>
-                  </div>
-               </div>
+            <div class="card bg-gray-900 text-white p-6 rounded-lg">
+               <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+               <p>
+                  To empower students by providing resources, mentorship, and opportunities, fostering an entrepreneurial mindset, and building a strong foundation for startups.
+               </p>
             </div>
          </div>
       </div>
@@ -106,13 +192,15 @@
       window.addEventListener('load', () => {
          setTimeout(() => {
             document.querySelectorAll('.coordinator img').forEach(img => {
-               img.classList.add('loaded');
+               img.classList.add('opacity-100');
             });
          }, 500);
       });
    </script>
-   
-   <!-- Bootstrap JS -->
+
+   <!-- Bootstrap JS (If you want to keep Bootstrap JS functionality) -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../js/index.js"></script>
 </body>
+
 </html>
